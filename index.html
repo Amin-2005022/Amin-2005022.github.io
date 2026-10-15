@@ -56,19 +56,47 @@
       font: 17px/1.55 Arial, sans-serif;
     }
 
-    section.group { margin-top: 40px; }
+    details.group { margin-top: 24px; }
 
     .group-title {
-      margin: 0 0 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0;
+      padding: 14px 4px;
       font-size: 22px;
       font-weight: 400;
       border-bottom: 1px solid var(--line);
-      padding-bottom: 10px;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
     }
+
+    .group-title::-webkit-details-marker { display: none; }
+
+    .group-title .count {
+      margin-left: auto;
+      color: var(--muted);
+      font: 400 13px/1 Arial, sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .group-title .chevron {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
+      transition: transform 0.18s ease;
+    }
+
+    details[open] > .group-title .chevron { transform: rotate(90deg); }
 
     .files {
       display: grid;
       gap: 12px;
+      margin-top: 16px;
     }
 
     .file {
@@ -123,8 +151,12 @@
       <p class="intro">Open or download the available documents below.</p>
     </header>
 
-    <section class="group" aria-label="AI">
-      <h2 class="group-title">AI</h2>
+    <details class="group" open>
+      <summary class="group-title">
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        AI
+        <span class="count">1 file</span>
+      </summary>
       <div class="files">
         <article class="file">
           <div>
@@ -134,10 +166,14 @@
           <a class="download" href="ai/AI%207%20Constraint%20Satisfaction_updated.pdf" download>Download</a>
         </article>
       </div>
-    </section>
+    </details>
 
-    <section class="group" aria-label="Android">
-      <h2 class="group-title">Android</h2>
+    <details class="group">
+      <summary class="group-title">
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Android
+        <span class="count">10 files</span>
+      </summary>
       <div class="files">
         <article class="file">
           <div>
@@ -217,10 +253,14 @@
           <a class="download" href="android/MainActivity.java" download>Download</a>
         </article>
       </div>
-    </section>
+    </details>
 
-    <section class="group" aria-label="Graphics">
-      <h2 class="group-title">Graphics</h2>
+    <details class="group">
+      <summary class="group-title">
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Graphics
+        <span class="count">1 file</span>
+      </summary>
       <div class="files">
         <article class="file">
           <div>
@@ -230,10 +270,14 @@
           <a class="download" href="graphics/Lecture%205%20%E2%80%93%20Midpoint%20Line%20and%20Midpoint%20Circle.pdf" download>Download</a>
         </article>
       </div>
-    </section>
+    </details>
 
-    <section class="group" aria-label="SCPE">
-      <h2 class="group-title">SCPE</h2>
+    <details class="group">
+      <summary class="group-title">
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        SCPE
+        <span class="count">4 files</span>
+      </summary>
       <div class="files">
         <article class="file">
           <div>
@@ -264,7 +308,7 @@
           <a class="download" href="scpe/synthetic_benchmark.py" download>Download</a>
         </article>
       </div>
-    </section>
+    </details>
   </main>
 </body>
 </html>
