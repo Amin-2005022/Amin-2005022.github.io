@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public files</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #64717d;
+      --paper: #f5f7f8;
+      --line: #dce3e8;
+      --accent: #0b6e69;
+      --accent-dark: #07514e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: linear-gradient(135deg, #eef7f5 0%, var(--paper) 46%, #f8f1e8 100%);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 12vh 0 64px;
+    }
+
+    header { margin-bottom: 32px; }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font: 700 12px/1.2 Arial, sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 600px;
+      font-size: clamp(38px, 8vw, 72px);
+      line-height: 0.98;
+      font-weight: 400;
+    }
+
+    .intro {
+      max-width: 520px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font: 17px/1.55 Arial, sans-serif;
+    }
+
+    section.group { margin-top: 40px; }
+
+    .group-title {
+      margin: 0 0 14px;
+      font-size: 22px;
+      font-weight: 400;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .files {
+      display: grid;
+      gap: 12px;
+    }
+
+    .file {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 8px 24px rgba(23, 33, 43, 0.05);
+    }
+
+    .file-name {
+      overflow-wrap: anywhere;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .file-type {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font: 12px/1.2 Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .download {
+      flex: 0 0 auto;
+      padding: 11px 15px;
+      color: #fff;
+      background: var(--accent);
+      font: 700 13px/1 Arial, sans-serif;
+      text-decoration: none;
+    }
+
+    .download:hover, .download:focus-visible { background: var(--accent-dark); }
+
+    @media (max-width: 520px) {
+      main { padding-top: 64px; }
+      .file { align-items: flex-start; flex-direction: column; }
+      .download { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Shared materials</p>
+      <h1>Public files</h1>
+      <p class="intro">Open or download the available documents below.</p>
+    </header>
+
+    <section class="group" aria-label="AI">
+      <h2 class="group-title">AI</h2>
+      <div class="files">
+        <article class="file">
+          <div>
+            <div class="file-name">AI 7 Constraint Satisfaction_updated.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="ai/AI%207%20Constraint%20Satisfaction_updated.pdf" download>Download</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="group" aria-label="Android">
+      <h2 class="group-title">Android</h2>
+      <div class="files">
+        <article class="file">
+          <div>
+            <div class="file-name">Manifest, Permissions &amp; UI Layouts.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="android/Manifest%2C%20Permissions%20%26%20UI%20Layouts.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">ConstraintLayout &amp; XML Layout Files.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="android/ConstraintLayout%20%26%20XML%20Layout%20Files.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">activity_main.xml</div>
+            <span class="file-type">XML layout</span>
+          </div>
+          <a class="download" href="android/activity_main.xml" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">Receivers, Providers &amp; the Manifest.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="android/Receivers%2C%20Providers%20%26%20the%20Manifest.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">SQLite Databases &amp; Room Persistence Library.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="android/SQLite%20Databases%20%26%20Room%20Persistence%20Library.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">AppDatabase.java</div>
+            <span class="file-type">Java source</span>
+          </div>
+          <a class="download" href="android/AppDatabase.java" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">Fruit.java</div>
+            <span class="file-type">Java source</span>
+          </div>
+          <a class="download" href="android/Fruit.java" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">FruitDao.java</div>
+            <span class="file-type">Java source</span>
+          </div>
+          <a class="download" href="android/FruitDao.java" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">Data Storage &amp; Persistence — Shared Preferences.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="android/Data%20Storage%20%26%20Persistence%20%E2%80%94%20Shared%20Preferences.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">Firebase Realtime Database &amp; Authentication.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="android/Firebase%20Realtime%20Database%20%26%20Authentication.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">MainActivity.java</div>
+            <span class="file-type">Java source</span>
+          </div>
+          <a class="download" href="android/MainActivity.java" download>Download</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="group" aria-label="Graphics">
+      <h2 class="group-title">Graphics</h2>
+      <div class="files">
+        <article class="file">
+          <div>
+            <div class="file-name">Lecture 5 – Midpoint Line and Midpoint Circle.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="graphics/Lecture%205%20%E2%80%93%20Midpoint%20Line%20and%20Midpoint%20Circle.pdf" download>Download</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="group" aria-label="SCPE">
+      <h2 class="group-title">SCPE</h2>
+      <div class="files">
+        <article class="file">
+          <div>
+            <div class="file-name">Lab 02 – Sieve Benchmark.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="scpe/Lab%2002%20%E2%80%93%20Sieve%20Benchmark.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">sieve_benchmark.py</div>
+            <span class="file-type">Python script</span>
+          </div>
+          <a class="download" href="scpe/sieve_benchmark.py" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">Lab 03 – Synthetic Benchmarks.pdf</div>
+            <span class="file-type">PDF document</span>
+          </div>
+          <a class="download" href="scpe/Lab%2003%20%E2%80%93%20Synthetic%20Benchmarks.pdf" download>Download</a>
+        </article>
+        <article class="file">
+          <div>
+            <div class="file-name">synthetic_benchmark.py</div>
+            <span class="file-type">Python script</span>
+          </div>
+          <a class="download" href="scpe/synthetic_benchmark.py" download>Download</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
